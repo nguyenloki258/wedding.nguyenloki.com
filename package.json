@@ -1,9 +1,0 @@
-{
-  "name": "weeding",
-  "version": "1.0.0",
-  "description": "Loki and nieu weeding",
-  "main": "index.js",
-  "repository": "https://gitlab.com/nguyenhero/weeding.git",
-  "author": "NguyenHero <mri.hannibal@gmail.com>",
-  "license": "MIT"
-}

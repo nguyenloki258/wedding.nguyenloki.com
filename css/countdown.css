@@ -1,0 +1,187 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.main-countdown {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-position: bottom;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  max-width: 1440px;
+  position: relative;
+}
+
+.main-countdown .container-countdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.main-countdown .countdown-block {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin-right: 30px;
+}
+
+.main-countdown .countdown-block:last-child {
+  margin-right: 0;
+}
+
+.main-countdown .countdown-block .subtitle {
+  color: #8486a9;
+}
+
+.main-countdown .time-element {
+  background-color: white;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 8px 0px 0px #eee;
+          box-shadow: 0px 8px 0px 0px #eee;
+  color: #fb6087;
+  font-size: 5.5em;
+  height: 140px;
+  line-height: 138px;
+  margin-bottom: 27px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 150px;
+}
+
+.main-countdown .time-element::before, .main-countdown .time-element::after {
+  background: pink;
+  border-radius: 50%;
+  content: "";
+  height: 10px;
+  position: absolute;
+  top: calc(50% - 5px);
+  width: 10px;
+  z-index: 6;
+}
+
+.main-countdown .time-element::before {
+  left: -5px;
+}
+
+.main-countdown .time-element::after {
+  right: -5px;
+}
+
+.main-countdown .time-element > span {
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.main-countdown .time-element .top {
+  background-color: #eee;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  -webkit-transform: perspective(200px);
+          transform: perspective(200px);
+  z-index: 3;
+}
+
+.main-countdown .time-element .top::after,
+.main-countdown .time-element .bottom-back::after {
+  border-bottom: 1px solid white;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.main-countdown .time-element .bottom {
+  z-index: 1;
+}
+
+.main-countdown .time-element .bottom::before {
+  background-color: white;
+  content: "";
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.main-countdown .time-element .bottom-back {
+  background-color: white;
+  height: 50%;
+  overflow: hidden;
+  top: 0;
+  z-index: 2;
+}
+
+.main-countdown .time-element .bottom-back span {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.main-countdown .time-element .top,
+.main-countdown .time-element .top-back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  height: 50%;
+  overflow: hidden;
+}
+
+.main-countdown .time-element .top-back {
+  background-color: #eee;
+  bottom: 0;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-transform: perspective(200px) rotateX(180deg);
+          transform: perspective(200px) rotateX(180deg);
+  z-index: 4;
+}
+
+.main-countdown .time-element .top-back span {
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: -100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-countdown .container-countdown {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=countdown.css.map */
