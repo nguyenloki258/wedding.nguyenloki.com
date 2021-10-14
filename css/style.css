@@ -473,8 +473,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .my-music {
   position: fixed;
