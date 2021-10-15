@@ -1,3 +1,100 @@
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+/* necessary plugin styles */
+.ellip {
+  display: block;
+  height: 100%;
+}
+
+.ellip-line {
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.ellip,
+.ellip-line {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #606060;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #909090;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -9,6 +106,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  text-align: center;
   background-position: bottom;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,7 +119,6 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  max-width: 1440px;
   position: relative;
 }
 
@@ -32,6 +130,12 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   gap: 2rem;
+}
+
+@media (max-width: 767px) {
+  .main-countdown .container-countdown {
+    font-size: 1rem;
+  }
 }
 
 .main-countdown .countdown-block {
@@ -54,22 +158,39 @@
 
 .main-countdown .countdown-block .subtitle {
   color: #8486a9;
+  font-size: 2em;
+}
+
+@media (max-width: 767px) {
+  .main-countdown .countdown-block .subtitle {
+    font-size: 1em;
+  }
 }
 
 .main-countdown .time-element {
   background-color: white;
   border-radius: 8px;
-  -webkit-box-shadow: 0px 8px 0px 0px #eee;
-          box-shadow: 0px 8px 0px 0px #eee;
+  -webkit-box-shadow: 0px 4px 0px 0px #eee;
+          box-shadow: 0px 4px 0px 0px #eee;
   color: #fb6087;
-  font-size: 5.5em;
-  height: 140px;
-  line-height: 138px;
-  margin-bottom: 27px;
+  font-size: 2.5em;
+  height: 90px;
+  line-height: 85px;
+  margin-bottom: 16px;
   overflow: hidden;
   position: relative;
   text-align: center;
-  width: 150px;
+  width: 85px;
+}
+
+@media (max-width: 767px) {
+  .main-countdown .time-element {
+    width: 50px;
+    height: 45px;
+    line-height: 45px;
+    margin-bottom: 16px;
+    font-size: 1.5em;
+  }
 }
 
 .main-countdown .time-element::before, .main-countdown .time-element::after {
@@ -174,12 +295,5 @@
   position: absolute;
   right: 0;
   top: -100%;
-}
-
-@media only screen and (max-width: 768px) {
-  .main-countdown .container-countdown {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-  }
 }
 /*# sourceMappingURL=countdown.css.map */
