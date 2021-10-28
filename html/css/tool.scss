@@ -16,7 +16,7 @@ $desktop-xl-width: 1400px;
 }
 @mixin desktop-sm {
     @media (min-width: #{$desktop-sm-width}) and (max-width: #{$desktop-width - 1px}) {
-        @content;
+        @content; 
     }
 }
 

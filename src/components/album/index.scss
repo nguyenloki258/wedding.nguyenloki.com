@@ -1,0 +1,39 @@
+@import "../../styles/_tool.scss";
+
+.album {
+  padding: 24px;
+  .album-thumb {
+    margin: 4px;
+  }
+  .lg-react-element {
+    @include desktop-xl{
+      column-count: 5;
+      column-gap: 1rem;
+    }
+    @include desktop{
+      column-count: 5;
+      column-gap: 1rem;
+    }
+    @include desktop-sm{
+      column-count: 3;
+      column-gap: 1rem;
+    }
+    @include tablet {
+      column-count: 3;
+      column-gap: 1rem;
+    }
+    @include mobile {
+      column-count: 2;
+      column-gap: 1rem;
+    }
+
+    a {
+      display: block;
+      margin-bottom: 1em;
+      // background-color: red;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
