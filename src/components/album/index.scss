@@ -36,9 +36,22 @@
       }
     }
   }
-  .album-cover{
-    .lg-toolbar{
-      display: none;
-    }
+  
+}
+.album-cover{
+  .lg-toolbar{
+    display: none;
+  }
+  .lg-icon{
+    display: none;
+  }
+  .lg-sub-html{
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    height: 32px;
+  }
+  .lg-content{
+    bottom: 0!important;
   }
 }

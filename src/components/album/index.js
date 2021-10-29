@@ -30,45 +30,54 @@ const Album = ({ cover }) => {
         if (detail) {
 
             albumRef.current = detail.instance;
-            if(cover){
-            albumRef.current?.openGallery();
+            if (cover) {
+                albumRef.current?.openGallery();
             }
         }
     }, [cover]);
 
+    const onAfterSlide = (detail) => {
+        document.querySelector('.lg-sub-html').innerHTML = "Paragraph changed!";
+    }
+
     return (
-        <div className="album">
-            <LightGallery
-                ref={albumRef}
-                className={cover?"album-cover":""}
-                speed={500}
-                actualSize={true}
-                onInit={onInit}
-                mode={"lg-zoom-in-out"}
-                autoplay={cover ? true : false}
-                plugins={cover ? [
-                    lgAutoplay
-                ] : [
-                    lgThumbnail,
-                    lgZoom,
-                    lgShare,
-                    // lgRoute, 
-                    // lgRelativeCaption,
-                    // lgPager,
-                    // lgMediumZoom,
-                    // lgHash,
-                    // lgFullscreen,
-                    // lgComment,
-                    lgAutoplay
-                ]}
-            >
-                {IMAGES.slice(0, 1000).map((x, index) =>
-                    <a referrerPolicy="no-referrer" href={x.src} key={index}>
-                        <img className="album-thumb" referrerPolicy="no-referrer" alt={`Ảnh cưới Nguyễn & Hường ${index + 1}`} src={x.src.replace("=w1920-h1080", "=w300-h4000")} />
-                    </a>
-                )}
-            </LightGallery>
+        <div>
+            <div className="album">
+
+                <LightGallery
+                    ref={albumRef}
+                    addClass={cover ? "album-cover" : ""}
+                    speed={500}
+                    actualSize={true}
+                    onInit={onInit}
+                    mode={"lg-zoom-in-out"}
+                    autoplay={cover ? true : false}
+                    onAfterSlide={onAfterSlide}
+                    plugins={cover ? [
+                        lgAutoplay
+                    ] : [
+                        lgThumbnail,
+                        lgZoom,
+                        lgShare,
+                        // lgRoute, 
+                        // lgRelativeCaption,
+                        // lgPager,
+                        // lgMediumZoom,
+                        // lgHash,
+                        // lgFullscreen,
+                        // lgComment,
+                        lgAutoplay
+                    ]}
+                >
+                    {IMAGES.slice(0, 1000).map((x, index) =>
+                        <a referrerPolicy="no-referrer" href={x.src} key={index}>
+                            <img className="album-thumb" referrerPolicy="no-referrer" alt={`Ảnh cưới Nguyễn & Hường ${index + 1}`} src={x.src.replace("=w1920-h1080", "=w300-h4000")} />
+                        </a>
+                    )}
+                </LightGallery>
+            </div>
         </div>
+
     );
 }
 export default React.memo(Album);
