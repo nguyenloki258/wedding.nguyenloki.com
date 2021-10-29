@@ -1,0 +1,33 @@
+
+.control-scale{
+    bottom: 0;
+    right: 0;
+}
+.control-navigation{
+    bottom: 24px;
+    right: 8px;
+}
+.control-location{
+    bottom: 115px;
+    /* bottom: 86px; */
+    right: 8px;
+}
+.control-fullscreen{
+    bottom: 24px;
+    right: 42px;
+} 
+.icon-3d{
+    position: absolute;
+    bottom: 56px;
+    right: 41px;
+    padding: 1px;
+    background-color: white;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 4px;
+    label{
+        font-weight: bold;
+    }
+}
