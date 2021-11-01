@@ -1,4 +1,4 @@
-image: yarn
+image: node
 
 build:
   stage: build
@@ -6,8 +6,9 @@ build:
     paths:
       - node_modules/
   script:
-    - yarn
-    - yarn build
+    #- node install
+    - npm install --save --legacy-peer-deps
+    - node run build
   artifacts:
     paths:
       - build
@@ -19,7 +20,7 @@ test:
       - node_modules/
     policy: pull
   script:
-    - yarn test
+    - node run test
 
 pages:
   stage: deploy
