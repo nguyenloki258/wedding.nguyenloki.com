@@ -30,7 +30,7 @@ const FIXED_POINT = [
 const Map = () => {
     const mapRef = useRef();
     const [viewport, setViewport] = useState({
-        latitude: 20.946474,
+        latitude: 20.996474,
         longitude: 106.234035,
         zoom: 9,
         bearing: 0,

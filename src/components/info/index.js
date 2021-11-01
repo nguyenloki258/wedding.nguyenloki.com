@@ -3,15 +3,19 @@ import "./index.scss";
 import React from 'react';
 import Countdown from 'react-countdown';
 import IMAGES from '../../consts/data';
+import { EFFECT_IN } from '../../consts/effect';
 
 const Info = ({ page }) => {
-    const selectedImage = IMAGES[Math.floor(Math.random() * IMAGES.length)];
-    const renderInfo = () => {
 
-        switch (page) {
+    const selectedImage = IMAGES[Math.floor(Math.random() * IMAGES.length)];
+    const effectBg = EFFECT_IN[Math.floor(Math.random() * EFFECT_IN.length)];
+    const effectItem = EFFECT_IN[Math.floor(Math.random() * EFFECT_IN.length)];
+    const renderInfo = () => {
+        const numb = page%4;
+        switch (numb) {
             case 0:
                 return (
-                    <div className="block summary  animate__animated animate__fadeInRight">
+                    <div className={`block summary animate__animated animate__delay-1s ${effectItem}`}>
                         <div className="title-info">
                             <div>
                                 Nguyễn
@@ -28,7 +32,7 @@ const Info = ({ page }) => {
                 )
             case 1:
                 return (
-                    <div className="block summary  animate__animated animate__fadeInUp">
+                    <div className={`block summary animate__animated animate__delay-1s ${effectItem}`}>
                         <div className="title-info">
 
                             <div>
@@ -43,7 +47,7 @@ const Info = ({ page }) => {
                 )
             case 2:
                 return (
-                    <div className="block summary  animate__animated animate__fadeInDown">
+                    <div className={`block summary animate__animated animate__delay-1s ${effectItem}`}>
                         <div className="title-info">
 
                             <div>
@@ -61,7 +65,7 @@ const Info = ({ page }) => {
                 const renderCountDown = (e) => {
                     console.log(e);
                     return (
-                        <div className="block countdown  animate__animated animate__fadeInLeft">
+                        <div className={`block countdown animate__animated animate__delay-1s ${effectItem}`} >
                             <div className="item days">
                                 <div className="val">{e.days}</div>
                                 <div className="sub">Ngày</div>
@@ -95,7 +99,7 @@ const Info = ({ page }) => {
         }
     }
     return (
-        <div className="info" style={{ backgroundImage: `url(${selectedImage?.src})` }}>
+        <div referrerPolicy="no-referrer" className={`info animate__animated ${effectBg}`} style={{ backgroundImage: `url(${selectedImage?.src})` }}>
             {renderInfo()}
         </div>
     );
