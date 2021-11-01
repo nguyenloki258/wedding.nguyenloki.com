@@ -1,0 +1,44 @@
+@import "./styles/_tool.scss";
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  .left-panel {
+    flex-grow: 1;
+
+    @include desktop-xl {
+      flex-grow: 1;
+    }
+    @include desktop {
+      flex-grow: 1;
+    }
+    @include desktop-sm {
+      flex-grow: 1;
+    }
+    @include tablet {
+      display: none;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+  .right-panel {
+    background-color: black;
+    @include desktop-xl {
+      width: 900px;
+    }
+    @include desktop {
+      width: 700px;
+    }
+    @include desktop-sm {
+      width: 500px;
+    }
+    @include tablet {
+      width: 100vw;
+    }
+    @include mobile {
+      width: 100vw;
+    }
+  }
+}

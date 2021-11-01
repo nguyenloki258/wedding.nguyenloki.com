@@ -1,0 +1,54 @@
+@import "../../styles/_tool.scss";
+
+.info {
+  .block {
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+  }
+  .countdown {
+    width: 6rem;
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      color: black;
+      -webkit-text-fill-color: white;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+      .val {
+        text-align: right;
+        font-size: 2.5rem;
+        margin-right: 1rem;
+        width: 3rem;
+      }
+      .sub {
+        font-size: 1rem;
+        width: 2rem;
+      }
+    }
+  }
+  .summary { 
+    *{
+      font-family: 'Dancing Script', sans-serif;
+      
+      color: black;
+      -webkit-text-fill-color: white;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+    }
+    .title-info {
+      font-size: 4rem;
+      position: relative;
+      .and {
+        font-size: 2rem; 
+        position: relative;
+        top: 2rem;
+        left: 0.5rem;
+      }
+    }
+    .sub-info {
+
+    }
+  }
+}

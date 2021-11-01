@@ -19,7 +19,7 @@ import lgShare from 'lightgallery/plugins/share';
 import lgAutoplay from 'lightgallery/plugins/autoplay';
 
 import IMAGES from '../../consts/data';
-import { useRef } from 'react';
+import { useRef } from 'react'; 
 
 
 const Album = ({ cover }) => {
@@ -35,11 +35,11 @@ const Album = ({ cover }) => {
             }
         }
     }, [cover]);
-
     const onAfterSlide = (detail) => {
-        document.querySelector('.lg-sub-html').innerHTML = "Paragraph changed!";
-    }
 
+        document.querySelector('.lg-sub-html').innerHTML = "";
+    }
+   
     return (
         <div>
             <div className="album">
