@@ -2,11 +2,103 @@
 body {
   overflow: hidden;
 }
+
 .App {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
+  .menu {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    z-index: 999;
+    .menu-btn {
+      img {
+        width: 36px;
+        height: 36px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 4px;
+      }
+      &.active {
+        img {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+
+    .menu-panel {
+      max-height: 0;
+      max-width: 0;
+      transition: all 0.2s ease-out;
+      overflow: hidden;
+      padding: 0;
+      &.active {
+        max-width: 500px;
+        max-height: 500px;
+        transition: all 0.5s ease-in;
+      }
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      border-radius: 4px;
+      border-top-left-radius: 0;
+      background-color: white;
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 4px;
+        padding: 1rem;
+        opacity: 0.8;
+        span {
+          color: black;
+        }
+        &:hover {
+          opacity: 1;
+        }
+        img {
+          width: 36px;
+          height: 36px;
+        }
+      }
+    }
+  }
+  .music {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 999;
+    text-align: right;
+    .music-btn {
+      img {
+        width: 36px;
+        height: 36px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 4px;
+      }
+    }
+
+    .music-panel {
+      max-width: 0;
+      max-height: 0;
+      transition: all 0.2s ease-out;
+      overflow: hidden;
+      text-align: right;
+      padding: 0;
+      &.active {
+        max-width: 500px;
+        max-height: 500px;
+        transition: all 0.5s ease-in;
+      }
+    }
+  }
   .left-panel {
     overflow: hidden;
     position: fixed;
@@ -23,86 +115,13 @@ body {
       width: calc(100vw - 450px);
     }
     @include tablet {
-      display: none;
+      position: relative;
     }
     @include mobile {
-      display: none;
+      position: relative;
     }
   }
   .right-panel {
-    .menu {
-      position: fixed;
-      top: 1rem;
-      left: 1rem;
-      cursor: pointer;
-      z-index: 999;
-      .menu-btn {
-        img {
-          width: 36px;
-          height: 36px;
-        }
-      }
-
-      .menu-panel {
-        opacity: 0;
-        display: grid;
-        margin-left: 1rem;
-        padding: 1rem;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        border-radius: 4px;
-        box-shadow: -1px 0px 5px 0px #776f6f;
-        background-color: white;
-        .item {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          cursor: pointer;
-          border-radius: 4px;
-          padding: 0.5rem;
-          opacity: 0.8;
-          &:hover {
-            opacity: 1;
-          }
-          img {
-            width: 36px;
-            height: 36px;
-          }
-        }
-      }
-      &:hover {
-        .menu-panel {
-          opacity: 1;
-        }
-      }
-    }
-    .music {
-      position: fixed;
-      bottom: 1rem;
-      right:  1rem;
-      cursor: pointer;
-      z-index: 999;
-      text-align: right;
-      .music-btn {
-        img {
-          width: 36px;
-          height: 36px;
-        }
-      }
-
-      .music-panel {
-        opacity: 1;height: 0;
-        overflow: hidden;
-        // position: absolute;
-        
-      }
-      &:hover {
-        .music-panel {
-          opacity: 1;height: unset;
-          transition: all 1s ;
-        }
-      }
-    }
     @include desktop-xl {
       padding-left: calc(100vw - 600px);
     }
@@ -135,11 +154,11 @@ body {
         margin: 0 auto;
       }
       .block-tile {
-        font-size: 1.5rem;
+        font-size: 2rem;
         text-align: center;
         margin-bottom: 0.5rem;
       }
-   
     }
   }
 }
+ 

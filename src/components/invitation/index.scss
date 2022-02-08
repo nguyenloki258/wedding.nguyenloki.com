@@ -10,12 +10,24 @@
     bottom: 0;
     left: 0;
   }
-  .main{
-      img{
-        margin: auto;
-        width: 300px;
-        max-width: calc(100% - 150px);
-
-      }
+  .heading {
+    font-family: "Dancing Script", sans-serif;
+    position: absolute;
+    width: 100%;
+    top: 10rem;
+    left: 0;
+    text-align: center;
+    font-size: 5rem;
+    color: pink;
+  }
+  .send-to {
+    position: absolute;
+    width: 100%;
+    bottom:  4rem;
+    left: 0;
+    text-align: center;
+    color: pink;
+    font-size: 2rem;
+    font-family: "Dancing Script", sans-serif;
   }
 }

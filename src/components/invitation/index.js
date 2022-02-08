@@ -6,12 +6,11 @@ const Invitation = () => {
   return (
     <div >
       <div className="invitation">
-        <img alt="" src="images/invitation/sakura-right.webp" class="top-right-decoration animate__animated animate__fadeInDown" />
-        <img alt="" src="images/invitation/sakura-left.webp" class="bottom-left-decoration animate__animated animate__fadeInUp" />
-        {/* <div className="main">
-          <img alt="" src="images/invitation/savethedate_wh.gif" />
-
-        </div> */}
+        <img alt="" src="images/invitation/sakura-right.webp" className="top-right-decoration animate__animated animate__fadeInDown" />
+        <img alt="" src="images/invitation/sakura-left.webp" className="bottom-left-decoration animate__animated animate__fadeInUp" />
+         
+        <div className="heading">Thiệp mời </div>
+        <div className="send-to">Kính mời<br/>........................</div>
       </div>
 
     </div>
