@@ -99,6 +99,20 @@ body {
       }
     }
   }
+  .action-btn{
+    position: absolute;
+    display: block;
+    padding: 10px;
+    background: #4caf50;
+    border-radius: 8px;
+    bottom: 1rem;
+    left: calc(50vw - 5rem);
+    width: 10rem;
+    z-index: 9999;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+  }
   .left-panel {
     overflow: hidden;
     position: fixed;
@@ -140,6 +154,15 @@ body {
     .element {
       &.page1 {
         min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include tablet {
+          min-height: 0;
+        }
+        @include mobile {
+          min-height: 0;
+        }
       }
       position: relative;
       padding: 1rem;

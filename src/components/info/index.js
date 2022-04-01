@@ -89,7 +89,7 @@ const Info = ({ page }) => {
                 }
                 return (
                     < >
-                        <Countdown date={new Date("2021-12-19")} renderer={renderCountDown}>
+                        <Countdown date={new Date("2022-12-19")} renderer={renderCountDown}>
                             <Completionist />
                         </Countdown>
                     </>
@@ -99,7 +99,7 @@ const Info = ({ page }) => {
         }
     }
     return (
-        <div referrerPolicy="no-referrer" className={`info animate__animated ${effectBg}`} style={{ backgroundImage: `url(${selectedImage?.src})` }}>
+        <div referrerPolicy="no-referrer" className={`info animate__animated ${effectBg}`} style={{ backgroundImage: `url(${selectedImage?.src})`, backgroundSize:"contain" }}>
             {renderInfo()}
         </div>
     );
