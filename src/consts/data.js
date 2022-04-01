@@ -235,6 +235,6 @@ const IMAGES = [
   src: "https://lh3.googleusercontent.com/DR1184G9IYNEWpzdh1psX9Px4lMqUnVfuExr4Tephhe-HBw3mV2cAqsfphLnxdhpX5p-_U1fYCVuDTQG8ugbHlvBwC_v_xKQy7CID3igy0Diie0UMspytFP-Vja0wzHqUwd40JhjGg=w1920-h1080"
 }, {
   src: "https://lh3.googleusercontent.com/mcLHTVagbTYQgxDl8PkfBiv-7Sq-MXW9nxghULtII287yqfdmpKUU-jZoM9pcEE8D-x9jeQ6x4J6aCkgtQ_MC0w9fgPyaoSBk5lx0A1P3JFDp4hvMpr4zTEi6ThTnwXYeAg7mqbVdQ=w1920-h1080>
-},
+}
 ]
 export default IMAGES;
